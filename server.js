@@ -57,7 +57,7 @@ app.get("/", function(req, res) {
 
 // use cheerio to scrape stories from TechCrunch and store them
 app.get("/scrape", function(req, res) {
-    request("https://nytimes.com/", function(error, response, html) {
+    request("https://techcrunch.com/", function(error, response, html) {
         // Load the html body from request into cheerio
         var $ = cheerio.load(html);
         $("div.post-block").each(function(i, element) {
